@@ -1,0 +1,61 @@
+
+* {
+    background: #f9f9f9;
+}  
+
+p {
+    text-align: left;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    height: auto;
+    margin-bottom: 60px;
+    /* border-bottom: #888888 solid 5px; */
+}
+
+img {
+    /* border: 1px solid #888888; */
+    border-radius: 5px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+#tvButtons {
+    margin-bottom: 75px;
+}
+#show-form {
+    margin: 10px 10px 30px 10px;
+    float: left;
+    color: #ed6161;
+    border: 1.1px solid gray;
+    height: 70px;
+    width: 275px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 20px;
+    box-shadow: 3px 6px 4px 6px #888888;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+}
+
+button {
+    background: #cee5de;
+    border-radius: 5px;
+    border: 1.1px solid gray;
+    margin: 2px 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#add-show {
+    background: #ed6161;
+    border-radius: 5px;
+    border: 1.1px solid gray;
+    margin: 2px 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#show-input {
+    border-radius: 5px;
+}
