@@ -10,7 +10,7 @@ p {
 }
 header {
     height: auto;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     /* border-bottom: #888888 solid 5px; */
 }
 
@@ -23,10 +23,11 @@ img:hover {
     cursor: pointer;
 }
 #tvButtons {
-    margin-bottom: 75px;
+    margin-bottom: 80px;
+    margin-top: 30px;
 }
 #show-form {
-    margin: 10px 10px 30px 10px;
+    margin: 0px 10px 30px 10px;
     float: left;
     color: #ed6161;
     border: 1.1px solid gray;

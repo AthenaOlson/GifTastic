@@ -1,18 +1,13 @@
 
-
 $(document).ready(function() {
 
 console.log("hello!")
 
-// var topics = ["Three's Company", "The Muppets"]
     $("#tvButtons").on("click", "button", function() {
 
-    
-    // $("button").on("click", function() {
         // Grabbing and storing the tv-show property value from the button
         var show = $(this).attr("data-show");
         
-  
         // Constructing a queryURL using the name of TV show
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
           show + "&api_key=pVWxdkSpg4eEVIfLmja5OQJFOnCgAYKN&limit=10";
@@ -25,18 +20,17 @@ console.log("hello!")
         })
 
         .then(function(response) {
-            console.log(queryURL);
-            console.log(response.data);
 
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
                 var tvDiv = $("<div>");
                 var p = $("<p>").text("Rating: " + results[i].rating);
                 var tvImage = $("<img>");
-                tvImage.attr("src", results[i].images.fixed_height.url);
+                tvImage.attr("src", results[i].images.fixed_height_still.url);
                 tvDiv.append(p);
                 tvDiv.append(tvImage);
                 $("#gifs-appear-here").prepend(tvDiv);
+                console.log(response.data);
             }
         });
     });
@@ -53,18 +47,19 @@ console.log("hello!")
         $("#show-input").val("");   
     })
 
-    // $(".gif").on("click", function() {
-    //     var state = $(this).attr("data-state");
-    //     if (state === "still") {
-    //         $(this).attr(".gif", $(this).attr("data-animate"));
-    //         $(this).attr("data-state", "animate");
-    //     } else {
-    //         $(this).attr(".gif", $(this).attr("data-still"));
-    //         $(this).attr("data-state", "still");
-    //     }
-    // })
+    $(document).on("click", "img", function(){
 
-
+        var src = $(this).attr("src");
+         if($(this).hasClass('playing')){
+            //stop
+            $(this).attr('src', src.replace(/\.gif/i, "_s.gif"))
+            $(this).removeClass('playing');
+         } else {
+           //play
+           $(this).addClass('playing');
+           $(this).attr('src', src.replace(/\_s.gif/i, ".gif"))
+         }
+      });
 });
     
         
